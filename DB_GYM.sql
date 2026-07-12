@@ -72,7 +72,7 @@ ALTER TABLE AnalisisGym
 ALTER COLUMN ExperienceLevel DECIMAL(3,2);
 GO
 
-/*Generaba problemas al ejecutar el ETL, se cambió a NVARCHAR*/
+/*Generaba problemas al ejecutar el SSIS, se cambió a NVARCHAR*/
 ALTER TABLE AnalisisGym
 ALTER COLUMN AlertaSalud NVARCHAR(50);
 
@@ -83,3 +83,6 @@ FROM AnalisisGym;
 
 SELECT TOP 10 *
 FROM AnalisisGym;
+
+/*Ejecutar antes de iniciar el SSIS, para que se duplique la data*/
+TRUNCATE TABLE AnalisisGym;
