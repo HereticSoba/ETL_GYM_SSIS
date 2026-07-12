@@ -53,15 +53,16 @@ GO
 
 SELECT * FROM AnalisisGym;
 
-
-sp_help AnalisisGym;
-
-SELECT COUNT(*) AS Total_Registros
-FROM AnalisisGym;
-
-SELECT TOP 10 *
-FROM AnalisisGym;
-
 /*Ejecutar antes de iniciar el SSIS, para que se duplique la data*/
 TRUNCATE TABLE AnalisisGym;
 
+/* info de las columnas*/
+sp_help AnalisisGym;
+
+/*Ver el total de registros, y un nombre arriba por placer xd */
+SELECT COUNT(*) AS Total_Registros
+FROM AnalisisGym;
+
+/* Top 10 primeras de las tablas*/
+SELECT TOP 10 *
+FROM AnalisisGym;
