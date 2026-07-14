@@ -9,7 +9,7 @@ CREATE TABLE AnalisisGym
 	Id INT IDENTITY(1,1) PRIMARY KEY,
 
 	--RF1 Perfil físico
-	Age DECIMAL(5,2),
+	Age INT,
 	Gender VARCHAR(50),
 	WeigthKg DECIMAL(5,2),
 	BMI DECIMAL(5,2),
@@ -50,8 +50,6 @@ CREATE TABLE AnalisisGym
 	AlertaSalud NVARCHAR(50),
 );
 GO
-
-SELECT * FROM AnalisisGym;
 
 /*Ejecutar antes de iniciar el SSIS, para que se duplique la data*/
 TRUNCATE TABLE AnalisisGym;

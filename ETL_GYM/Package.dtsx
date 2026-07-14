@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{F737C315-4EC6-4C2B-8F32-BA3D7E74AA0B}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{51C8863F-AAB7-40BE-99C1-A5B28CD8070A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -750,13 +750,11 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Age]"
-                      dataType="numeric"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Age]"
                       name="Copy of Age"
-                      precision="5"
-                      scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1254,10 +1252,8 @@
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Burns Calories (per 30 min)]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Copy of Age]"
-                      cachedDataType="numeric"
+                      cachedDataType="i4"
                       cachedName="Copy of Age"
-                      cachedPrecision="5"
-                      cachedScale="2"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Age]"
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copy of Age]" />
                     <inputColumn
@@ -1309,10 +1305,8 @@
                       name="Id" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Age]"
-                      dataType="numeric"
-                      name="Age"
-                      precision="5"
-                      scale="2" />
+                      dataType="i4"
+                      name="Age" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gender]"
                       codePage="1252"
