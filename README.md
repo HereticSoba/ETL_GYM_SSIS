@@ -1,14 +1,20 @@
-# ETL GYM - SQL Server Integration Services (SSIS)
+# 🏋️ ETL GYM - SQL Server Integration Services (SSIS)
 
-## Description
-
-ETL project developed with **SQL Server Integration Services (SSIS)** to extract, transform, and load gym data from a CSV dataset into SQL Server.
-
-The process extracts data from a CSV file, performs data type conversions, generates a derived column (**AlertaSalud**) based on the Body Mass Index (BMI), and stores the transformed data in a SQL Server database for further analysis.
+ETL project developed with **SQL Server Integration Services (SSIS)** that extracts gym data from a CSV dataset, transforms the information, and loads it into **SQL Server** for analysis and reporting.
 
 ---
 
-## Technologies Used
+## 🚀 Features
+
+- Import data from CSV files.
+- Data type conversion.
+- BMI classification using a Derived Column.
+- Load transformed records into SQL Server.
+- Ready for reporting and data analysis.
+
+---
+
+## 🛠 Technologies
 
 - SQL Server
 - SQL Server Integration Services (SSIS)
@@ -18,26 +24,32 @@ The process extracts data from a CSV file, performs data type conversions, gener
 
 ---
 
-## ETL Workflow
+## 🔄 ETL Process
 
-1. Read data from the CSV file.
-2. Convert data types to match the SQL Server schema.
-3. Generate the derived column **AlertaSalud** based on BMI.
-4. Load the transformed records into the **AnalisisGym** table.
+```text
+CSV Dataset
+      │
+      ▼
+Data Conversion
+      │
+      ▼
+Derived Column
+(AlertaSalud)
+      │
+      ▼
+SQL Server
+(BD_GYM → AnalisisGym)
+```
 
 ---
 
-## Database
-
-The project uses the following database:
+## 🗄 Database
 
 **Database:** `BD_GYM`
 
-### AnalisisGym
+**Table:** `AnalisisGym`
 
-Stores the transformed gym data loaded from the CSV file.
-
-Main fields include:
+### Stored Fields
 
 - Age
 - Gender
@@ -63,13 +75,27 @@ Main fields include:
 
 ---
 
-## Derived Column
+## 🧮 BMI Classification
 
-A derived column named **AlertaSalud** was created to classify users according to their Body Mass Index (BMI).
+| BMI | Health Status |
+|------|---------------|
+| < 18.5 | Underweight |
+| 18.5 – 24.9 | Healthy |
+| 25.0 – 29.9 | Overweight |
+| ≥ 30.0 | Obesity |
 
-| BMI Range | Health Status |
-|-----------|---------------|
-| < 18.5 | Bajo peso |
-| 18.5 – 24.9 | Saludable |
-| 25.0 – 29.9 | Sobrepeso |
-| ≥ 30.0 | Obesidad |
+---
+
+## ▶️ How to Run
+
+1. Open the solution in **Visual Studio 2022**.
+2. Restore the SQL Server database (`BD_GYM`).
+3. Update the SQL Server connection if necessary.
+4. Execute the SSIS package.
+5. Verify the loaded data in the `AnalisisGym` table.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **HereticSoba**
